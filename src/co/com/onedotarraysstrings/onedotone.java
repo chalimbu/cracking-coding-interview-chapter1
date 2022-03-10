@@ -29,8 +29,6 @@ public class onedotone {
         return true;
     }
 
-
-
     public static boolean isUniqueNoStructures(String string){
         //we can sort and later
         if(string.length()<=1){
