@@ -2,29 +2,16 @@ package co.com.onedotarraysstrings;
 
 public class onedotthree {
     public static void main(String[] args) {
-        System.out.println(urilify(new char[]{'M','r',' ','J','h','o','n',' ','S','m','i','t','h',' ',' ',' ',' '}));
+        /*Urlify write a method to replace all spaces in a string with '%20' You may assume that the string has sufficient
+        space at the end to hold the additional characters, and that you're given the "true" length of the string
+        (Note: if implementing in java, please use a character array so that you can perfom this operation in place.)
+        *
+        Example:
+        Input: "Mr John Smith    ", 13
+        Output: "Mr%20John%20Smith"
+        * */
+
     }
 
-    private static String urilify(char[] url) {
-        int offset=0;
-        boolean firstFound=false;
-        for(int i=url.length-1;i>=0;i--){
-            if(url[i]!=' '){
-                firstFound=true;
-            }
-            if(!firstFound){
-                offset++;
-            }else{
-                if(url[i]!=' ') {
-                    url[i + offset] = url[i];
-                }else{
-                    url[i+offset] = '0';
-                    url[i+offset-1] = '2';
-                    url[i+offset-2] = '%';
-                    offset-=2;
-                }
-            }
-        }
-        return String.valueOf(url);//how to transform from char array to string
-    }
+
 }
