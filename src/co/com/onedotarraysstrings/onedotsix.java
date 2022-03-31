@@ -9,36 +9,8 @@ public class onedotsix {
     *  */
 
     public static void main(String[] args) {
-        System.out.println(simpleCompress("aa342"));
     }
 
-    private static String simpleCompress(String input) {
-        if(input.length()<=1){
-            return input;
-        }
-        StringBuilder stringBuilder=new StringBuilder(input.length()*2);
-        char currentCharacter=input.charAt(0);
-        int count=1;
-        for(int i=1;i<input.length();i++){
-            if(input.charAt(i)==currentCharacter){
-                count++;
-            }else{
-                stringBuilder.append(""+currentCharacter+count);
-                if(stringBuilder.length()>input.length()){
-                    return input;
-                }
-                currentCharacter=input.charAt(i);
-                count=1;
-            }
-        }
-        stringBuilder.append(""+currentCharacter+count);
-        String finalString= stringBuilder.toString();
-        if(finalString.length()>input.length()){
-            return input;
-        }else {
-            return finalString;
-        }
-    }
 
 
 }
